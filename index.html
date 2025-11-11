@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sneharup Mukherjee | Product Marketing &amp; Growth</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJPWS89CC7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-PJPWS89CC7');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,6 +49,22 @@
             <div>
               <span>400+ hrs</span>
               <p>Automation time saved via analytics stacks</p>
+            </div>
+          </div>
+          <div class="connect-card hero-connect-card">
+            <div class="connect-card__body">
+              <p class="connect-card__eyebrow">Connect with me</p>
+            </div>
+            <div class="connect-card__actions">
+              <a class="contact-icon" href="https://www.linkedin.com/in/sneharup-mukherjee/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+                <img src="icons/linkedin.png" alt="" aria-hidden="true" />
+              </a>
+              <a class="contact-icon" href="https://t.me/m00n_m4n" target="_blank" rel="noreferrer" aria-label="Telegram chat">
+                <img src="icons/telegram.png" alt="" aria-hidden="true" />
+              </a>
+              <a class="contact-icon" href="mailto:mukherjee.sneharup@gmail.com" aria-label="Email Sneharup">
+                <img src="icons/gmail.png" alt="" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>
@@ -288,23 +315,25 @@
     </main>
 
     <footer class="footer">
-      <p>Ready to craft the next growth chapter?</p>
+      <h2 class="footer-heading">Ready to craft the next growth chapter?</h2>
       <div class="calendar-button" id="calendar-call"></div>
-      <p class="footer-note">
-        Prefer async? Email
-        <a href="mailto:mukherjee.sneharup@gmail.com">mukherjee.sneharup@gmail.com</a>
-        or ping on
-        <a href="https://www.linkedin.com/in/sneharup-mukherjee/" target="_blank" rel="noreferrer">LinkedIn</a>.
-      </p>
-      <button id="scrollTop" aria-label="Back to top">Back to top</button>
     </footer>
 
     <div class="float-bar" id="connectBar" aria-label="Connect menu">
       <div class="float-logo">Connect with me</div>
       <div class="float-actions">
-        <a href="https://www.linkedin.com/in/sneharup-mukherjee/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://t.me/sneharup" target="_blank" rel="noreferrer">Telegram</a>
-        <a href="mailto:mukherjee.sneharup@gmail.com">Email</a>
+        <a class="icon-link" href="https://www.linkedin.com/in/sneharup-mukherjee/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <img src="icons/linkedin.png" alt="" aria-hidden="true" />
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a class="icon-link" href="https://t.me/m00n_m4n" target="_blank" rel="noreferrer" aria-label="Telegram">
+          <img src="icons/telegram.png" alt="" aria-hidden="true" />
+          <span class="sr-only">Telegram</span>
+        </a>
+        <a class="icon-link" href="mailto:mukherjee.sneharup@gmail.com" aria-label="Email">
+          <img src="icons/gmail.png" alt="" aria-hidden="true" />
+          <span class="sr-only">Email</span>
+        </a>
       </div>
     </div>
 
@@ -315,7 +344,7 @@
         if (window.calendar && document.getElementById('calendar-call')) {
           calendar.schedulingButton.load({
             url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ32zTeI2JyjbmoGHzNKz0zO6eHhQQWcyIbM5p_1hxEgLxDOb5FcNDVbwtLw2eFP40HMaBXn2Xq_?gv=true',
-            color: '#12f7d6',
+            color: '#8881e6',
             label: 'Book an intro call',
             target: document.getElementById('calendar-call'),
           });

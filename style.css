@@ -26,6 +26,11 @@ body {
   font-size:1rem;
 }
 
+p,
+li {
+  text-align:justify;
+}
+
 .hero,
 main,
 .footer {

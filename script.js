@@ -1,16 +1,19 @@
 const scrollButton = document.getElementById('scrollTop');
+const connectBar = document.getElementById('connectBar');
 
-const toggleScrollButton = () => {
-  if (window.scrollY > 400) {
-    scrollButton.style.opacity = '1';
-    scrollButton.style.pointerEvents = 'auto';
+const toggleScrollElements = () => {
+  const scrolled = window.scrollY > 400;
+  scrollButton.style.opacity = scrolled ? '1' : '0';
+  scrollButton.style.pointerEvents = scrolled ? 'auto' : 'none';
+
+  if (scrolled) {
+    connectBar.classList.add('visible');
   } else {
-    scrollButton.style.opacity = '0';
-    scrollButton.style.pointerEvents = 'none';
+    connectBar.classList.remove('visible');
   }
 };
 
-window.addEventListener('scroll', toggleScrollButton);
+window.addEventListener('scroll', toggleScrollElements);
 scrollButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-toggleScrollButton();
+toggleScrollElements();

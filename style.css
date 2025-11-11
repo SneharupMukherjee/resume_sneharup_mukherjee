@@ -33,6 +33,7 @@ body {
   min-height:100vh;
   line-height:1.6;
   font-size:1rem;
+  padding-bottom:5rem;
 }
 
 p,
@@ -334,52 +335,26 @@ main,
 }
 
 .footer {
-  padding:3rem 2rem 4rem;
+  padding:3rem 1.5rem 4.5rem;
   text-align:center;
   color:var(--text);
-  background:linear-gradient(135deg,var(--card),var(--bg-card));
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow-strong),var(--shadow-accent);
+}
+
+.calendar-button {
+  margin:1.5rem auto;
+  display:flex;
+  justify-content:center;
+}
+
+.footer-note {
+  color:var(--text-muted);
+  margin-bottom:1.5rem;
 }
 
 .footer a {
   color:var(--text);
   text-decoration:none;
   border-bottom:1px dotted var(--accent);
-}
-
-.footer-ctas {
-  margin-top:1.25rem;
-  display:flex;
-  flex-wrap:wrap;
-  gap:0.75rem;
-  justify-content:center;
-}
-
-.footer-ctas .cta {
-  padding:0.85rem 1.4rem;
-  border-radius:999px;
-  border:1px solid var(--border);
-  text-decoration:none;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.footer-ctas .cta.primary {
-  background:linear-gradient(120deg,var(--accent),#5dfbf1);
-  color:#020203;
-  border:none;
-  box-shadow:var(--shadow-accent);
-  animation:pulse 3s ease-in-out infinite;
-}
-
-.footer-ctas .cta.secondary {
-  background:var(--chip-bg);
-  color:var(--text);
-}
-
-.footer-ctas .cta:hover {
-  transform:translateY(-3px);
 }
 
 #scrollTop {
@@ -406,6 +381,7 @@ main,
   left:50%;
   transform:translate(-50%, 40px);
   width:min(420px, calc(100vw - 2rem));
+  flex-wrap:nowrap;
   background:var(--float-bg);
   border:1px solid var(--border);
   border-radius:999px;
@@ -438,7 +414,7 @@ main,
 .float-actions {
   display:flex;
   gap:0.45rem;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
   justify-content:flex-end;
 }
 
@@ -449,17 +425,12 @@ main,
   border-radius:999px;
   border:1px solid transparent;
   transition:color 0.2s,background 0.2s,border 0.2s;
+  white-space:nowrap;
 }
 
 .float-actions a:hover {
   color:var(--text);
   border-color:var(--border);
-}
-
-@keyframes pulse {
-  0% { box-shadow:0 0 20px rgba(18,247,214,0.35); }
-  50% { box-shadow:0 0 35px rgba(18,247,214,0.55); }
-  100% { box-shadow:0 0 20px rgba(18,247,214,0.35); }
 }
 
 @media (max-width:1024px) {
@@ -509,6 +480,7 @@ main,
   .float-actions {
     width:100%;
     justify-content:flex-start;
+    flex-wrap:wrap;
     gap:0.35rem;
   }
   .float-actions a {

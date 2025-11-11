@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -288,10 +289,13 @@
 
     <footer class="footer">
       <p>Ready to craft the next growth chapter?</p>
-      <div class="footer-ctas">
-        <a href="https://cal.com/" target="_blank" rel="noreferrer" class="cta primary">Book a 30-min intro</a>
-        <a href="mailto:mukherjee.sneharup@gmail.com" class="cta secondary">mukherjee.sneharup@gmail.com</a>
-      </div>
+      <div class="calendar-button" id="calendar-call"></div>
+      <p class="footer-note">
+        Prefer async? Email
+        <a href="mailto:mukherjee.sneharup@gmail.com">mukherjee.sneharup@gmail.com</a>
+        or ping on
+        <a href="https://www.linkedin.com/in/sneharup-mukherjee/" target="_blank" rel="noreferrer">LinkedIn</a>.
+      </p>
       <button id="scrollTop" aria-label="Back to top">Back to top</button>
     </footer>
 
@@ -305,5 +309,18 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+      window.addEventListener('load', () => {
+        if (window.calendar && document.getElementById('calendar-call')) {
+          calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ32zTeI2JyjbmoGHzNKz0zO6eHhQQWcyIbM5p_1hxEgLxDOb5FcNDVbwtLw2eFP40HMaBXn2Xq_?gv=true',
+            color: '#12f7d6',
+            label: 'Book an intro call',
+            target: document.getElementById('calendar-call'),
+          });
+        }
+      });
+    </script>
   </body>
 </html>
